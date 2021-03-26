@@ -85,6 +85,10 @@
   }
 }
 
+.section:nth-child(2n + 3) {
+  background: #00000008;
+}
+
 .projects {
   padding: 0 24px;
   app-project-item {
