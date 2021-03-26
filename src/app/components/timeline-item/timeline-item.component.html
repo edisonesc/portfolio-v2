@@ -1,0 +1,26 @@
+<div class="timeline-container">
+  <div class="row">
+    <ng-container *ngFor="let item of experiences">
+      <div
+        class="col-xs-12 col-sm-12 col-md-6 timeline-column"
+        *ngIf="item?.length > 0"
+      >
+        <h3 id="header">{{ item[0]?.type }}</h3>
+        <div class="list-block" *ngFor="let experience of item">
+          <p id="timeline-title">
+            {{ experience?.position }} - {{ experience?.company_name }}
+          </p>
+          <p id="duration">
+            {{ experience?.started_at }} - {{ experience?.finished_at }}
+          </p>
+          <div class="description">
+            <p *ngFor="let responsibility of experience?.responsibilities">
+              {{ responsibility }}
+            </p>
+          </div>
+        </div>
+        <div class="list-block-start"></div>
+      </div>
+    </ng-container>
+  </div>
+</div>

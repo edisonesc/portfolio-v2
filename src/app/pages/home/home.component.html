@@ -1,0 +1,66 @@
+<div class="card header">
+  <div class="center">
+    <div class="profile-picture">
+      <img [src]="user?.profile_picture" />
+    </div>
+    <h6 id="name">{{ user?.name }}</h6>
+    <h6 id="position">{{ user?.position }}</h6>
+  </div>
+</div>
+<div class="section introduction">
+  <h6 id="title">Introduction</h6>
+  <p id="description">
+    Hi! I am a junior mobile application developer enthusiast on building useful
+    applications and UI design, eager to learn and increase my knowledge.
+  </p>
+</div>
+
+<!-- <div class="section introduction">
+  <p id="description">
+    Hi! I am a junior mobile application developer enthusiast on building useful
+    applications and UI design, eager to learn and increase my knowledge.
+  </p>
+</div> -->
+
+<div class="section">
+  <h6 id="title">Projects</h6>
+  <div class="projects">
+    <div class="row">
+      <app-project-item
+        class="col-xs-1 col-sm-6 col-md-6 col-lg-4"
+        *ngFor="let project of projects"
+        [project]="project"
+      ></app-project-item>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h6 id="title">Experiences</h6>
+  <div>
+    <app-timeline-item [experiences]="experiences"></app-timeline-item>
+  </div>
+</div>
+
+<div class="section">
+  <h6 id="title">Other Informations</h6>
+  <div class="other-informations">
+    <p>{{ user?.mobile_number }}</p>
+    <p>{{ user?.email }}</p>
+    <p>{{ user?.address }}</p>
+  </div>
+</div>
+
+<div class="card footer">
+  <div class="contact-icons">
+    <a href="https://www.linkedin.com/in/edisonesc/" target="_blank"
+      ><img src="assets/images/linkedin.png"
+    /></a>
+    <a href="https://github.com/edisonesc" target="_blank"
+      ><img src="assets/images/github.png"
+    /></a>
+    <a href="https://gitlab.com/escx" target="_blank"
+      ><img src="assets/images/gitlab.png"
+    /></a>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+.project-item {
+  min-height: 200px;
+  max-height: 410px;
+  height: 410px;
+  .header {
+    height: 60px;
+    min-height: 60px;
+    display: flex;
+  }
+  .body {
+    margin-top: 24px;
+    min-height: 180px !important;
+    max-height: 180px !important;
+  }
+  .footer {
+    // padding-top: 0;
+    // padding-bottom: 0;
+  }
+}
+
+#project-icon,
+#project-icon-alt {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  max-height: 60px;
+  max-width: 60px;
+  min-height: 60px;
+  min-width: 60px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  /* top: 15px; */
+  margin-top: 15px;
+  background: #1d1d1d;
+}
+
+#project-icon-alt {
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#project-name {
+  min-height: 40px;
+  a {
+    color: #1d1d1d !important;
+  }
+}
+
+#project-duration {
+  margin: auto 0 auto auto;
+  font-size: 0.875rem;
+}
+
+#project-description {
+  overflow: hidden;
+  max-height: 130px;
+}
+
+#project-description:hover {
+  overflow-y: auto;
+}
+
+.project-technologies {
+  padding: 16px 0;
+  margin: 18px 18px auto 18px;
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-height: 20vw;
+    overflow: hidden;
+    img {
+      width: 24px;
+      height: 24px;
+      margin: 8px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  .list:hover {
+    overflow-y: auto;
+  }
+}
+
+* {
+  // scrollbar-width: thin;
+  // scrollbar-color: blue black;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  //   background: orange;
+  box-shadow: inset 0 0 6px #1d1d1d;
+}
+
+*::-webkit-scrollbar-thumb {
+  // background-color: blue;
+  border-radius: 20px;
+  border: 3px solid #007bff;
+}

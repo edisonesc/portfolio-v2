@@ -1,0 +1,33 @@
+<div class="card project-item">
+  <div class="card-header header">
+    <img
+      *ngIf="project?.icon_url"
+      [src]="project?.icon_url"
+      id="project-icon"
+    />
+    <div *ngIf="!project?.icon_url" id="project-icon-alt">
+      <p>{{ getProjectAvatar() }}</p>
+    </div>
+    <p id="project-duration" class="text-black-50">
+      {{ project?.started_at }} - {{ project?.finished_at }}
+    </p>
+  </div>
+  <div class="card-body body">
+    <h6 id="project-name">
+      <a class="text-black-50" [href]="project?.project_url" target="_blank">{{
+        project?.name
+      }}</a>
+    </h6>
+    <p id="project-description">{{ project?.description }}</p>
+  </div>
+
+  <div class="project-technologies">
+    <h6 class="text-black-50">Technologies Used</h6>
+    <div class="list">
+      <img
+        *ngFor="let technology of project?.technologies"
+        [src]="technology?.icon_url"
+      />
+    </div>
+  </div>
+</div>
