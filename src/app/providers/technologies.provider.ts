@@ -94,7 +94,7 @@ export const android: Technology = {
   name: 'Android',
   url: 'https://www.android.com/',
   icon_url:
-    'http://logok.org/wp-content/uploads/2014/06/android-logo-2019-640x450.png',
+    'https://1000logos.net/wp-content/uploads/2016/10/Android-logo-500x344.jpg',
 };
 
 export const ionic: Technology = {
