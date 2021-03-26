@@ -24,10 +24,11 @@
   <div class="project-technologies">
     <h6 class="text-black-50">Technologies Used:</h6>
     <div class="list">
-      <img
-        *ngFor="let technology of project?.technologies"
-        [src]="technology?.icon_url"
-      />
+      <ng-container *ngFor="let technology of project?.technologies">
+        <a [href]="technology?.url">
+          <img [src]="technology?.icon_url" target="_self" />
+        </a>
+      </ng-container>
     </div>
   </div>
 </div>
