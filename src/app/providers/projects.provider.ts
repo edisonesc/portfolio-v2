@@ -46,11 +46,12 @@ export const projects: Project[] = [
   //   type: PROJECT_TYPE.OTHERS,
   // },
   {
-    name: 'STT File Downloader',
+    name: 'Speech Command File Downloader',
     started_at: 'Apr 2021',
     finished_at: 'Apr 2021',
-    description: 'STT and TTS web application that scrapes data from a specific website and download files via magnet link.',
-    technologies: [angular, typescript, nestjs, annyang, puppeteer, cheerio]
+    description: 'STT and TTS web application that takes audio inputs, scrapes data from a specific website using the translated audio information and download files via magnet link to a local transmission server.',
+    technologies: [angular, typescript, nestjs, annyang, puppeteer, cheerio],
+    type: PROJECT_TYPE.OTHERS
   },
   {
     name: 'Years Tracker',
