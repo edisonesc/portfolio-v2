@@ -29,6 +29,9 @@ import {
   obsidian,
   md,
   mermaid,
+  annyang,
+  puppeteer,
+  cheerio,
 } from './technologies.provider';
 import { PROJECT_TYPE } from '../enums/project-type.enum';
 
@@ -42,6 +45,13 @@ export const projects: Project[] = [
   //   icon_url: 'assets/images/projects/sb.jpg',
   //   type: PROJECT_TYPE.OTHERS,
   // },
+  {
+    name: 'STT File Downloader',
+    started_at: 'Apr 2021',
+    finished_at: 'Apr 2021',
+    description: 'STT and TTS web application that scrapes data from a specific website and download files via magnet link.',
+    technologies: [angular, typescript, nestjs, annyang, puppeteer, cheerio]
+  },
   {
     name: 'Years Tracker',
     started_at: 'Feb 2021',

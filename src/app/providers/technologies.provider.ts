@@ -189,6 +189,23 @@ export const mermaid: Technology = {
   icon_url: '',
 };
 
+export const annyang: Technology = {
+  name: 'Annyang',
+  url: 'https://www.talater.com/annyang/',
+  icon_url: 'https://www.talater.com/annyang/images/icon_user.png'
+}
+
+export const puppeteer: Technology = {
+  name: 'Puppeteer',
+  url: 'https://pptr.dev/',
+  icon_url: 'https://www.vectorlogo.zone/logos/pptrdev/pptrdev-icon.svg'
+}
+
+export const cheerio: Technology = {
+  name: 'Cheerio',
+  url: 'https://cheerio.js.org/',
+  icon_url: null
+}
 export const template: Technology = {
   name: '',
   url: '',
