@@ -11,7 +11,8 @@
             {{ experience?.position }} - {{ experience?.company_name }}
           </p>
           <p id="duration">
-            {{ experience?.started_at }} - {{ experience?.finished_at }}
+            {{ experience?.started_at }} -
+            {{ experience?.finished_at ? experience?.finished_at : "Present" }}
           </p>
           <div class="description">
             <p *ngFor="let responsibility of experience?.responsibilities">

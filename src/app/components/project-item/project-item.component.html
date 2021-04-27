@@ -9,7 +9,8 @@
       <p>{{ getProjectAvatar() }}</p>
     </div>
     <p id="project-duration" class="text-black-50">
-      {{ project?.started_at }} - {{ project?.finished_at }}
+      {{ project?.started_at }} -
+      {{ project?.finished_at ? project?.finished_at : "Present" }}
     </p>
   </div>
   <div class="card-body body">
@@ -26,7 +27,14 @@
     <div class="list">
       <ng-container *ngFor="let technology of project?.technologies">
         <a [href]="technology?.url">
-          <img [src]="technology?.icon_url" target="_self" />
+          <img
+            *ngIf="technology?.icon_url"
+            [src]="technology?.icon_url"
+            target="_self"
+          />
+          <div *ngIf="!technology?.icon_url" id="technology-icon-alt">
+            <p>{{ getTechnologyAvatar(technology) }}</p>
+          </div>
         </a>
       </ng-container>
     </div>

@@ -169,6 +169,26 @@ export const pyqt5: Technology = {
   icon_url:
     'https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg',
 };
+
+export const obsidian: Technology = {
+  name: 'Obsidian',
+  url: 'https://obsidian.md/',
+  icon_url:
+    'https://pbs.twimg.com/profile_images/1269490744609341442/MaweGLMN_400x400.png',
+};
+
+export const md: Technology = {
+  name: 'Markdown',
+  url: 'https://daringfireball.net/projects/markdown/',
+  icon_url: 'https://miro.medium.com/max/1400/0*V9tvdEAZmSjBG3Ny.gif',
+};
+
+export const mermaid: Technology = {
+  name: 'Mermaid',
+  url: 'https://mermaid-js.github.io/mermaid/#/',
+  icon_url: '',
+};
+
 export const template: Technology = {
   name: '',
   url: '',

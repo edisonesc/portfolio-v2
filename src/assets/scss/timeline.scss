@@ -8,6 +8,7 @@ p {
   width: 100%;
   margin-bottom: 50px;
   padding: 24px;
+  justify-content: space-evenly;
 }
 
 .timeline-container .row .timeline-column {
@@ -56,6 +57,7 @@ p {
 
 .timeline-container .row .timeline-column .list-block #timeline-title {
   color: #004385;
+  font-weight: bold;
 }
 
 .timeline-container .row .timeline-column .list-block .description {

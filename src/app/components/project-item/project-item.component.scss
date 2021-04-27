@@ -73,7 +73,8 @@
 
 .project-technologies {
   padding: 16px 0;
-  margin: 18px 18px auto 18px;
+  margin: auto 18px 0 18px;
+
   .list {
     display: flex;
     flex-direction: row;
@@ -87,6 +88,21 @@
       margin: 8px;
       object-fit: cover;
       border-radius: 50%;
+    }
+
+    #technology-icon-alt {
+      background: #1c1c1c;
+      width: 24px;
+      height: 24px;
+      margin: 8px;
+      border-radius: 50%;
+      display: flex;
+      p {
+        margin: auto;
+        font-weight: bold;
+        font-size: 0.675rem;
+        color: white;
+      }
     }
   }
   .list:hover {
@@ -113,4 +129,17 @@
   // background-color: blue;
   border-radius: 20px;
   border: 3px solid #007bff;
+}
+
+@media only screen and (max-width: 1024px) {
+  .project-technologies {
+    // /* padding: 8px 0; */
+    padding: 0 !important;
+    margin: auto 18px 18px 18px !important;
+  }
+
+  #project-description {
+    overflow: hidden;
+    max-height: 120px;
+  }
 }

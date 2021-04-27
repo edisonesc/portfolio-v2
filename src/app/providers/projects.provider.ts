@@ -26,10 +26,22 @@ import {
   pyupload,
   pyqt5,
   ffmpeg,
+  obsidian,
+  md,
+  mermaid,
 } from './technologies.provider';
 import { PROJECT_TYPE } from '../enums/project-type.enum';
 
 export const projects: Project[] = [
+  // {
+  //   name: 'Second Brain',
+  //   started_at: 'Feb 2021',
+  //   description:
+  //     'Project that uses PARA method for organizing and indexing knowledge.',
+  //   technologies: [obsidian, md, mermaid],
+  //   icon_url: 'assets/images/projects/sb.jpg',
+  //   type: PROJECT_TYPE.OTHERS,
+  // },
   {
     name: 'Years Tracker',
     started_at: 'Feb 2021',
@@ -92,13 +104,13 @@ export const projects: Project[] = [
     type: PROJECT_TYPE.MOBILE,
   },
   {
-    name: 'SALBS',
+    name: 'Pantera',
     started_at: 'Feb 2018',
     finished_at: 'April 2019',
     description:
       'Semi-autonomous Book Shelving Robot with Collision Detection, QR Code Matching, Line Tracing, Book and Space detection. It uses computer vision to detect and return book from its respective shelf using QR Code and uses line tracing as the way of transporting the book to the shelf and collision detection to detect obstacles.',
     technologies: [python, c, rpi, arduino, tensorflow],
-    icon_url: '',
+    icon_url: 'assets/images/projects/pantera.jpg',
     type: PROJECT_TYPE.SYSTEM,
   },
   {

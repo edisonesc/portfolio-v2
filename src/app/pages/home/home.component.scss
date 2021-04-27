@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   min-height: 300px;
   display: flex;
@@ -99,6 +109,10 @@
   }
 }
 
+.projects-row {
+  padding: 0 5vw;
+}
+
 .other-informations {
   padding: 0 24px;
   margin-bottom: 24px;
@@ -106,4 +120,16 @@
   p {
     margin: 0;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* For mobile phones: */
+  .projects-row {
+    padding: 0 !important;
+  }
+  // .project-technologies {
+  //   padding: 16px 0;
+  //   padding-bottom: 0;
+  //   margin: auto 18px 18px 18px;
+  // }
 }
