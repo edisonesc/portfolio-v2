@@ -87,16 +87,16 @@ ul {
 
 .profile-picture {
   margin: auto auto 16px 30px;
-
   img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
+    filter: invert(1);
   }
 }
 
@@ -104,7 +104,7 @@ ul {
 }
 
 .section {
-  min-height: 100px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
@@ -119,9 +119,8 @@ ul {
   //   }
 
   #description {
-    margin: 0 auto 0 auto;
+    margin: auto;
     padding: 0 24px;
-    min-height: 50px;
     display: flex;
     flex-wrap: wrap;
     // font-weight: bold;
