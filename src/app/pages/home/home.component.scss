@@ -145,10 +145,21 @@ ul {
       object-fit: cover;
       border-radius: 25%;
     }
-    a {
+    p {
       padding: 8px;
       // font-weight: bold;
     }
+  }
+
+  .item {
+    transition: transform 0.2s; /* Animation */
+  }
+
+  .item:hover {
+    cursor: pointer;
+    transform: scale(
+      1.05
+    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 }
 

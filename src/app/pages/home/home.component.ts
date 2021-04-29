@@ -67,4 +67,8 @@ export class HomeComponent implements OnInit {
     });
     return list;
   }
+
+  open(url) {
+    url && window.open(url, '_black')
+  }
 }

@@ -39,11 +39,12 @@
   <h6 id="title">Most Used Technologies</h6>
   <div class="most-used-projects-container">
     <ng-container *ngFor="let item of analytics?.mostUsedTechnologies.data; let i = index">
-      <div class="card item" *ngIf="!analytics?.mostUsedTechnologies?.limit || i <= analytics?.mostUsedTechnologies.limit">
+      <div class="card item" *ngIf="!analytics?.mostUsedTechnologies?.limit || i <= analytics?.mostUsedTechnologies.limit" (click)="open(item?.technology?.url)">
         <img [src]="item?.technology?.icon_url"/> 
-        <a class="text-black-50" [href]="item?.technology?.url" target="_blank">{{
+        <!-- <a class="text-black-50" [href]="item?.technology?.url" target="_blank">{{
           item?.technology?.name
-        }}</a>
+        }}</a> -->
+        <p>{{item?.technology?.name}}</p>
       </div>
     </ng-container>
   </div>
