@@ -26,7 +26,7 @@ export const typeorm: Technology = {
 };
 
 export const mysql: Technology = {
-  name: 'Type ORM',
+  name: 'MySQL',
   url: 'https://www.mysql.com/',
   icon_url: 'https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg',
 };

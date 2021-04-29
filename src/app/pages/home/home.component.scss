@@ -122,6 +122,36 @@ ul {
   }
 }
 
+.most-used-projects-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 16px 60px;
+  margin: 16px;
+  width: fit-content;
+  margin: 16px auto;
+  flex-wrap: wrap;
+  .item {
+    margin: 8px;
+    min-width: 150px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 50px;
+      width: 50px;
+      margin-top: 16px;
+      object-fit: cover;
+      border-radius: 25%;
+    }
+    a {
+      padding: 8px;
+      // font-weight: bold;
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   /* For mobile phones: */
   .projects-row {
