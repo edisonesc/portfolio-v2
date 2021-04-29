@@ -1,5 +1,5 @@
 import { Technology } from './../../models/technology.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Project } from 'src/app/models/project.model';
 import { projects } from 'src/app/providers/projects.provider';
 import { Experience } from 'src/app/models/experience.model';
@@ -30,10 +30,16 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  config = {
+  }
+
   constructor() {}
 
   ngOnInit(): void {
     this.initAnalytics();
+  }
+
+  ngAfterViewInit(): void {
   }
 
   initAnalytics() {
@@ -70,5 +76,11 @@ export class HomeComponent implements OnInit {
 
   open(url) {
     url && window.open(url, '_black')
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+  
+
   }
 }

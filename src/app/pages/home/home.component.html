@@ -17,13 +17,28 @@
     <div class="profile-picture">
       <img [src]="user?.profile_picture" />
     </div>
-    <h6 id="name">{{ user?.name }}</h6>
-    <h6 id="position">{{ user?.position }}</h6>
+    <div>
+      <h6 id="name">{{ user?.name }}</h6>
+      <h6 id="position">{{ user?.position }}</h6>
+      <hr>
+      <div class="contact-icons header-social">
+        <a href="https://www.linkedin.com/in/edisonesc/" target="_blank"
+          ><img src="assets/images/linkedin.png"
+        /></a>
+        <a href="https://github.com/edisonesc" target="_blank"
+          ><img src="assets/images/github.png"
+        /></a>
+        <a href="https://gitlab.com/escx" target="_blank"
+          ><img src="assets/images/gitlab.png"
+        /></a>
+      </div>
+    </div>
+
   </div>
 </div>
 <div class="section introduction">
   <h6 id="title">Introduction</h6>
-  <p id="description">
+  <p id="description" #descriptionElement>
     {{ user?.description }}
   </p>
 </div>

@@ -9,7 +9,9 @@ ul {
 }
 
 .header {
-  min-height: 300px;
+  filter: invert(1) hue-rotate(180deg);
+  box-shadow: 0 0 16px;
+  min-height: 100vh;
   display: flex;
   // background: black;
   background: rgb(0, 0, 0);
@@ -21,6 +23,21 @@ ul {
   border-radius: 0;
 }
 
+.header-social {
+  justify-content: center;
+  a img {
+    height: 5vmin;
+    width: 5vmin;
+    transition: transform 0.1s; /* Animation */
+  }
+  a img:hover {
+    cursor: pointer;
+    transform: scale(
+      1.05
+    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+
 .footer {
   min-height: 60px;
   background: black;
@@ -29,44 +46,54 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  .contact-icons {
-    display: flex;
-    flex-direction: row;
-  }
+}
 
-  .contact-icons img {
-    height: 4vmin;
-    width: 4vmin;
-    min-height: 24px;
-    min-width: 24px;
-    margin: auto 5px;
-  }
+.contact-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-icons img {
+  height: 4vmin;
+  width: 4vmin;
+  min-height: 24px;
+  min-width: 24px;
+  margin: auto 5px;
 }
 
 .center {
+  padding: 30px;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: end;
+  align-items: center;
+  text-align: right;
 }
 
 #name {
-  margin: auto;
-  font-size: 1.225rem;
+  // margin: auto;
+  font-size: 2.2rem;
   color: white;
   margin-bottom: 3px;
 }
 
 #position {
-  margin: auto;
+  font-size: 1.2rem;
+  // margin: auto;
   color: #ffffffa1;
   font-weight: 300;
 }
 
 .profile-picture {
-  margin: auto auto 16px auto;
+  margin: auto auto 16px 16px;
+
   img {
-    width: 130px;
-    height: 130px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
@@ -94,12 +121,17 @@ ul {
   #description {
     margin: 0 auto 0 auto;
     padding: 0 24px;
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
     // font-weight: bold;
   }
 }
 
 .section:nth-child(2n + 3) {
-  background: #00000008;
+  background: #0000000a;
+
+  // filter: invert(1);
 }
 
 .projects {
@@ -133,8 +165,10 @@ ul {
   flex-wrap: wrap;
   .item {
     margin: 8px;
-    min-width: 150px;
-    min-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,9 +209,38 @@ ul {
     // padding-right: 0;
     padding: 0 16px;
   }
+
+  .header-social {
+    justify-content: flex-end;
+    a img {
+      height: 10vmin;
+      width: 10vmin;
+    }
+  }
+
+  hr {
+    margin-left: 10%;
+  }
+
+  .profile-picture {
+    display: none;
+  }
+
+  .most-used-projects-container .item {
+    height: 100px;
+    width: 100px;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
   // .project-technologies {
   //   padding: 16px 0;
   //   padding-bottom: 0;
   //   margin: auto 18px 18px 18px;
   // }
+}
+
+hr {
+  background: white;
 }
