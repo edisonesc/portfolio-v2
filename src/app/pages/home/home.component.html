@@ -33,14 +33,18 @@
         /></a>
       </div>
     </div>
-
+  </div>
+  <div class="scroll-down" (click)="scrollInto('introduction')">
+    <div class="scroll-arrow"></div>
+    <div class="scroll-arrow"></div>
+    <div class="scroll-arrow"></div>
   </div>
 </div>
+
 <div class="section introduction">
   <h6 id="title">Introduction</h6>
-  <p id="description" #descriptionElement>
-    {{ user?.description }}
-  </p>
+  <div id="description" #descriptionElement [innerHtml]="user?.description">
+  </div>
 </div>
 
 <!-- <div class="section introduction">
@@ -50,15 +54,12 @@
   </p>
 </div> -->
 
-<div class="section">
+<div class="section mut">
   <h6 id="title">Most Used Technologies</h6>
   <div class="most-used-projects-container">
     <ng-container *ngFor="let item of analytics?.mostUsedTechnologies.data; let i = index">
       <div class="card item" *ngIf="!analytics?.mostUsedTechnologies?.limit || i <= analytics?.mostUsedTechnologies.limit" (click)="open(item?.technology?.url)">
         <img [src]="item?.technology?.icon_url"/> 
-        <!-- <a class="text-black-50" [href]="item?.technology?.url" target="_blank">{{
-          item?.technology?.name
-        }}</a> -->
         <p>{{item?.technology?.name}}</p>
       </div>
     </ng-container>
@@ -85,7 +86,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section other-informations-section">
   <h6 id="title">Other Informations</h6>
   <div class="other-informations">
     <p>{{ user?.mobile_number }}</p>

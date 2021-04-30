@@ -79,8 +79,12 @@ export class HomeComponent implements OnInit {
   }
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event) {
-  
+   onScroll(event) {
+  }
 
+  scrollInto(containerName: string) {
+    let element = document.getElementsByClassName(containerName);
+    console.log(element)
+    element.length > 0 && element[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 }

@@ -66,7 +66,7 @@ ul {
   margin: auto;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   text-align: right;
 }
@@ -104,7 +104,7 @@ ul {
 }
 
 .section {
-  min-height: 200px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
@@ -120,7 +120,7 @@ ul {
 
   #description {
     margin: auto;
-    padding: 0 24px;
+    padding: 0 50px;
     display: flex;
     flex-wrap: wrap;
     // font-weight: bold;
@@ -199,6 +199,11 @@ ul {
 
 @media only screen and (max-width: 1024px) {
   /* For mobile phones: */
+
+  #description {
+    padding: 0 24px !important;
+  }
+
   .projects-row {
     padding: 0 !important;
   }
@@ -243,4 +248,45 @@ ul {
 
 hr {
   background: white;
+}
+
+$animation-delay: 0.1s;
+$arrow-size: 18px;
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: 5%;
+  .scroll-arrow {
+    width: $arrow-size;
+    height: $arrow-size;
+    transform: rotate(45deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    animation: arrow-wave 1s infinite;
+    animation-direction: alternate;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation-delay: $animation-delay * $i;
+      }
+    }
+  }
+
+  @keyframes arrow-wave {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.other-informations-section {
+  min-height: 200px !important;
 }
