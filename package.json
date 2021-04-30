@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ghpages:release": "git checkout gh-pages && git push origin --delete gh-pages || : && ng build --prod --base-href https://edisonesc.github.io/portfolio-v2/ && ngh --dir=dist/portfolio-v2"
+    "ghpages:release": "git checkout gh-pages && git push origin --delete gh-pages || : && ng build --prod --base-href https://edisonesc.github.io/portfolio-v2/ && ngh --dir=dist/portfolio-v2",
+    "git:push": "git push origin gh-pages:master"
+
   },
   "private": true,
   "dependencies": {
