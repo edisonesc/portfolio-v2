@@ -112,7 +112,7 @@ ul {
   #title {
     margin: 24px auto 24px 24px;
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 250;
   }
 
   //   #title::before {
@@ -120,11 +120,12 @@ ul {
   //   }
 
   #description {
+    font-size: 1.2rem;
     margin: auto;
     padding: 0 50px;
     display: flex;
     flex-wrap: wrap;
-    font-weight: 200;
+    font-weight: 300;
     // font-weight: bold;
   }
 }
@@ -165,7 +166,7 @@ ul {
   margin: 16px auto;
   flex-wrap: wrap;
   .item {
-    margin: 8px;
+    margin: 24px;
     min-width: 100px;
     min-height: 100px;
     display: flex;
@@ -222,6 +223,8 @@ ul {
     a img {
       height: 10vmin;
       width: 10vmin;
+      max-width: 50px;
+      max-height: 50px;
     }
   }
 
@@ -233,12 +236,14 @@ ul {
     display: none;
   }
 
-  .most-used-projects-container .item {
-    height: 100px;
-    width: 100px;
-    img {
-      height: 30px;
-      width: 30px;
+  .most-used-projects-container {
+    .item {
+      height: 120px;
+      width: 120px;
+      img {
+        height: 30px;
+        width: 30px;
+      }
     }
   }
   // .project-technologies {
@@ -289,6 +294,21 @@ $arrow-size: 18px;
   }
 }
 
-.other-informations-section {
+// iphone se
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .most-used-projects-container {
+    .item {
+      margin: 8px;
+      img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+.other-informations-section,
+.mut {
   min-height: 200px !important;
 }
