@@ -112,6 +112,7 @@ ul {
   #title {
     margin: 24px auto 24px 24px;
     font-size: 1.5rem;
+    font-weight: 200;
   }
 
   //   #title::before {
@@ -123,6 +124,7 @@ ul {
     padding: 0 50px;
     display: flex;
     flex-wrap: wrap;
+    font-weight: 200;
     // font-weight: bold;
   }
 }
