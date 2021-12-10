@@ -2,6 +2,7 @@
   min-height: 200px;
   max-height: 410px;
   height: 410px;
+  overflow: hidden;
   .header {
     height: 60px;
     min-height: 60px;
@@ -64,7 +65,7 @@
 
 #project-description {
   overflow: hidden;
-  max-height: 130px;
+  max-height: 150px;
 }
 
 #project-description:hover {
@@ -78,10 +79,11 @@
   .list {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    margin: 0;
+    // flex-wrap: wrap;
     max-height: 20vw;
     overflow: hidden;
+    // width: fit-content;
     img {
       width: 24px;
       height: 24px;
@@ -105,8 +107,57 @@
       }
     }
   }
+
   .list:hover {
     overflow-y: auto;
+  }
+}
+
+.marquee {
+  justify-content: space-evenly;
+
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: scroll-left 2s linear infinite;
+  -webkit-animation: scroll-left 2s linear infinite;
+  animation: scroll-left 8s linear infinite;
+}
+
+@-moz-keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes scroll-left {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .list {
+    margin: 0 16px !important;
   }
 }
 
@@ -140,6 +191,6 @@
 
   #project-description {
     overflow: hidden;
-    max-height: 120px;
+    // max-height: 150px;
   }
 }

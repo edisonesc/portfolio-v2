@@ -100,8 +100,7 @@ export const android: Technology = {
 export const ionic: Technology = {
   name: 'Ionic',
   url: 'https://ionicframework.com/',
-  icon_url:
-    'https://pbs.twimg.com/profile_images/1148952014036054016/xxv7lLvp_400x400.jpg',
+  icon_url: null,
 };
 
 export const angular: Technology = {

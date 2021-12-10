@@ -254,6 +254,13 @@ ul {
   //   padding-bottom: 0;
   //   margin: auto 18px 18px 18px;
   // }
+  .contact-me-container {
+    width: 100% !important;
+    border: 0;
+    button {
+      width: 100% !important;
+    }
+  }
 }
 
 hr {
@@ -314,4 +321,28 @@ $arrow-size: 18px;
 .other-informations-section,
 .mut {
   min-height: 200px !important;
+}
+
+.contact-me-section {
+  min-height: unset;
+  .contact-me-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 70%;
+    margin: auto;
+    border-radius: 0;
+
+    button {
+      margin-top: 16px;
+      width: fit-content;
+      margin-left: auto;
+      padding: 8px 30px;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 16px;
+    }
+  }
 }

@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ghpages:release": "git checkout gh-pages && git push origin --delete gh-pages || : && ng build --prod --base-href https://edisonesc.github.io/portfolio-v2/ && ngh --dir=dist/portfolio-v2",
+    "ghpages:release": "git checkout gh-pages && git push origin --delete gh-pages || : && ng build --prod --base-href https://edisonesc.github.io && ngh --dir=dist/portfolio-v2",
     "git:push": "git push origin gh-pages:master",
     "pnr": "npm run git:push && npm run ghpages:release"
   },
@@ -27,6 +27,8 @@
     "bootstrap": "^4.4.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "video.js": "^7.11.8",
+    "videojs-flash": "^2.2.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
