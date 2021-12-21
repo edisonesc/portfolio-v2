@@ -11,7 +11,7 @@ export const experiences: Experience[] = [
       'Performs component refactorization/development for reusability and significantly reduce time cost',
       'Performs deployment on mobile applications',
       'Designs User Interface for mobile',
-      'Converts mockup designs to actual code',
+      'Converts mockup designs to code',
       'Supports re-development of current projects to use updated technologies and apply standard practices',
       'Supports on the development of back-end applications using NestJS',
     ],
