@@ -20,7 +20,7 @@
     <div>
       <h6 id="name">{{ user?.name }}</h6>
       <h6 id="position">{{ user?.position }}</h6>
-      <hr>
+      <hr />
       <div class="contact-icons header-social">
         <a href="https://www.linkedin.com/in/edisonesc/" target="_blank"
           ><img src="assets/images/linkedin.png"
@@ -43,8 +43,11 @@
 
 <div class="section introduction">
   <h6 id="title">Introduction</h6>
-  <div id="description" #descriptionElement [innerHtml]="user?.description">
-  </div>
+  <div
+    id="description"
+    #descriptionElement
+    [innerHtml]="user?.description"
+  ></div>
 </div>
 
 <!-- <div class="section introduction">
@@ -55,12 +58,21 @@
 </div> -->
 
 <div class="section mut">
-  <h6 id="title">Most Used Technologies</h6>
+  <h6 id="title">Languages and Frameworks commonly used</h6>
   <div class="most-used-projects-container">
-    <ng-container *ngFor="let item of analytics?.mostUsedTechnologies.data; let i = index">
-      <div class="card item" *ngIf="!analytics?.mostUsedTechnologies?.limit || i <= analytics?.mostUsedTechnologies.limit" (click)="open(item?.technology?.url)">
-        <img [src]="item?.technology?.icon_url"/> 
-        <p>{{item?.technology?.name}}</p>
+    <ng-container
+      *ngFor="let item of analytics?.mostUsedTechnologies.data; let i = index"
+    >
+      <div
+        class="card item"
+        *ngIf="
+          !analytics?.mostUsedTechnologies?.limit ||
+          i <= analytics?.mostUsedTechnologies.limit
+        "
+        (click)="open(item?.technology?.url)"
+      >
+        <img [src]="item?.technology?.icon_url" />
+        <p>{{ item?.technology?.name }}</p>
       </div>
     </ng-container>
   </div>
@@ -89,21 +101,14 @@
 <div class="section contact-me-section">
   <h6 id="title">Contact Me</h6>
 
-    <form
-    action="https://formspree.io/f/xgerkonn"
-    method="POST"
-    >
-      <div class="contact-me-container card">
-        <h6>
-         Email:
-        </h6> 
-        <input class="form-control" type="email" name="_replyto">
-        <h6>
-          Message:
-        </h6>
-        <textarea  class="form-control" name="message"></textarea>
-        <button class="btn btn-primary" type="submit">Send</button>
-      </div>
+  <form action="https://formspree.io/f/xgerkonn" method="POST">
+    <div class="contact-me-container card">
+      <h6>Email:</h6>
+      <input class="form-control" type="email" name="_replyto" />
+      <h6>Message:</h6>
+      <textarea class="form-control" name="message"></textarea>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </div>
   </form>
 </div>
 

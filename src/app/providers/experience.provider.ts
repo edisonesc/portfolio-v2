@@ -7,13 +7,13 @@ export const experiences: Experience[] = [
     position: 'Junior Mobile Application Developer',
     type: 'WORK',
     responsibilities: [
-      'Performs API integration to front-end and mobile applications',
+      'Wrote API integration to front-end and mobile applications using Ionic with Angular',
       'Performs component refactorization/development for reusability and significantly reduce time cost',
       'Performs deployment on mobile applications',
       'Designs User Interface for mobile',
       'Converts mockup designs to actual code',
       'Supports re-development of current projects to use updated technologies and apply standard practices',
-      'Supports on the development of back-end applications',
+      'Supports on the development of back-end applications using NestJS',
     ],
   },
   {
