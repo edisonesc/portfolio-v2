@@ -96,7 +96,7 @@ ul {
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
-    filter: invert(1);
+    filter: invert(1) hue-rotate(180deg) saturate(0) !important;
   }
 }
 

@@ -15,9 +15,19 @@
   </div>
   <div class="card-body body">
     <h6 id="project-name">
-      <a class="text-black-50" [href]="project?.project_url" target="_blank">{{
-        project?.name
-      }}</a>
+      <ng-container *ngIf="!project?.project_url; else noProjectUrlTemplate">
+        <p class="text-black-50">
+          {{ project?.name }}
+        </p>
+      </ng-container>
+      <ng-template #noProjectUrlTemplate>
+        <a
+          class="text-black-50"
+          [href]="project?.project_url"
+          target="_blank"
+          >{{ project?.name }}</a
+        >
+      </ng-template>
     </h6>
     <p id="project-description">{{ project?.description }}</p>
   </div>

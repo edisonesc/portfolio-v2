@@ -2,6 +2,14 @@ import { Experience } from '../models/experience.model';
 
 export const experiences: Experience[] = [
   {
+    company_name: "Accenture Inc.",
+    started_at: 'Jul 2021',
+    finished_at: 'Present',
+    position: 'Advanced App Engineering Analyst',
+    type: 'WORK',
+    location: 'Manila, PH'
+  },
+  {
     company_name: '8Layer Technologies Inc.',
     started_at: 'Jul 2019',
     finished_at: 'June 2021',
