@@ -78,3 +78,14 @@ p {
 .projects {
   margin-left: 8px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .timeline-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 0 24px;
+    justify-content: space-evenly;
+  }
+}
